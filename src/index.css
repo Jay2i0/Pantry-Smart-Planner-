@@ -1,0 +1,128 @@
+:root {
+	--bg: #f2eadb;
+	--panel: #fffdf7;
+	--text: #28312c;
+	--text-strong: #16211d;
+	--muted: #66716c;
+	--border: rgba(40, 49, 44, 0.12);
+	--accent: #4f8a74;
+	--accent-strong: #235748;
+	--accent-soft: rgba(79, 138, 116, 0.16);
+	--shadow:
+		rgba(33, 41, 37, 0.12) 0 18px 48px -22px,
+		rgba(33, 41, 37, 0.08) 0 8px 22px -14px;
+	--font-body: "Trebuchet MS", "Segoe UI", sans-serif;
+	--font-heading: Georgia, "Times New Roman", serif;
+	--font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+
+	font: 18px/1.55 var(--font-body);
+	color: var(--text);
+	background:
+		radial-gradient(
+			circle at top left,
+			rgba(79, 138, 116, 0.16),
+			transparent 24%
+		),
+		radial-gradient(
+			circle at top right,
+			rgba(224, 138, 46, 0.12),
+			transparent 20%
+		),
+		linear-gradient(180deg, #f9f4e7 0%, #f2eadb 45%, #edf4ef 100%);
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	background-image: linear-gradient(
+		rgba(255, 255, 255, 0.25) 1px,
+		transparent 1px
+	);
+	background-size: 100% 24px;
+	opacity: 0.25;
+}
+
+#root {
+	min-height: 100vh;
+}
+
+button,
+input,
+select {
+	font: inherit;
+}
+
+a {
+	color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--font-heading);
+	font-weight: 700;
+	color: var(--text-strong);
+	line-height: 1.08;
+}
+
+h1 {
+	font-size: clamp(2.4rem, 4vw, 4.25rem);
+	letter-spacing: -0.05em;
+}
+
+h2 {
+	font-size: clamp(2rem, 3vw, 3rem);
+	letter-spacing: -0.04em;
+}
+
+h3 {
+	font-size: clamp(1.35rem, 2vw, 1.8rem);
+	letter-spacing: -0.03em;
+}
+
+h4 {
+	font-size: 1.1rem;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+code {
+	font-family: var(--font-mono);
+	font-size: 0.95em;
+	padding: 0.2em 0.45em;
+	border-radius: 8px;
+	background: rgba(79, 138, 116, 0.12);
+	color: var(--accent-strong);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+::selection {
+	background: rgba(79, 138, 116, 0.24);
+}
