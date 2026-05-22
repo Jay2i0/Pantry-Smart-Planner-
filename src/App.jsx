@@ -235,7 +235,7 @@ function App() {
 	}
 
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/Pantry-Smart-Planner-/">
 			<div className="app-shell">
 				<AppHeader
 					pantryItems={pantryItems}
